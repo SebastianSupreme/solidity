@@ -672,7 +672,7 @@ printTask "Testing EVM Assembly JSON import/export..."
 SOLTMPDIR=$(mktemp -d)
 (
     cd "$SOLTMPDIR"
-    if ! "$REPO_ROOT/scripts/ASTImportTest.sh" evm-assembly
+    if ! "$REPO_ROOT/scripts/ImportExportTest.sh" evm-assembly
     then
         rm -r "$SOLTMPDIR"
         fail
@@ -684,7 +684,7 @@ printTask "Testing AST import/export..."
 SOLTMPDIR=$(mktemp -d)
 (
     cd "$SOLTMPDIR"
-    if ! "$REPO_ROOT/scripts/ASTImportTest.sh" ast
+    if ! "$REPO_ROOT/scripts/ImportExportTest.sh" ast
     then
         rm -r "$SOLTMPDIR"
         fail
